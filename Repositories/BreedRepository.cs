@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using Dapper;
+using MySql.Data;
 
 namespace TodoApi.Repositories
 {
@@ -31,7 +32,7 @@ namespace TodoApi.Repositories
         }
 
         public void Add(Breed entity)
-        {
+        {                
             entity.BreedId = Connection.ExecuteScalar<int>(
                 "INSERT INTO Breed(Name) VALUES(@Name); SELECT SCOPE_IDENTITY()",
                 param: new { Name = entity.Name },

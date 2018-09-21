@@ -1,8 +1,9 @@
 using TodoApi.Repositories;
 using System;
 using System.Data;
-using System.Data.SqlClient;
+using System.Data.SqlClient;  // It's for MSSQL 
 using Microsoft.Extensions.Configuration;
+using MySql.Data.MySqlClient;
 
 namespace TodoApi.DapperUnitOfWork
 {
@@ -21,8 +22,14 @@ namespace TodoApi.DapperUnitOfWork
         {
             _config = config;
 
-            string connectionString = _config["ConnectionStrings:SqlConn"];
-            _connection = new SqlConnection(connectionString);
+            // It's for MSSQL Connection
+            // string connectionString = _config["ConnectionStrings:SqlConn"];
+            // _connection = new SqlConnection(connectionString);
+
+            // It's for Mysql Connection
+            string connectionString = _config["ConnectionStrings:MySqlConn"];            
+            _connection = new MySqlConnection(connectionString);
+
             _connection.Open();
             _transaction = _connection.BeginTransaction();
         }
