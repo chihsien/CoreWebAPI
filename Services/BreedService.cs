@@ -22,6 +22,27 @@ namespace TodoApi.Services
             return _unitOfWork.BreedRepository.Find(id);
         }      
 
+        public List<Breed> Get()
+        {
+            return _unitOfWork.BreedRepository.All().ToList();
+        }
+
+        public void Add(Breed b)
+        {
+            _unitOfWork.BreedRepository.Add(b);
+            _unitOfWork.Commit();
+        }
+
+        public void Edit(Breed b)
+        {
+            _unitOfWork.BreedRepository.Update(b);
+            _unitOfWork.Commit();
+        }
+        public void Delete(int id)
+        {
+            _unitOfWork.BreedRepository.Delete(id);
+            _unitOfWork.Commit();
+        }
           // Breed r = new Breed(); 
             // string conn = "Data Source=10.0.2.15,1401;Initial Catalog=CYMoto;Persist Security Info=True;User ID=sa;Password=gary156*;MultipleActiveResultSets=True";
             // using (var uow = new UnitOfWork())

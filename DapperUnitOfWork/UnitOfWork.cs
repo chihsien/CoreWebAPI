@@ -21,7 +21,7 @@ namespace TodoApi.DapperUnitOfWork
         {
             _config = config;
 
-            string connectionString = _config["MyConnectionString"];
+            string connectionString = _config["ConnectionStrings:SqlConn"];
             _connection = new SqlConnection(connectionString);
             _connection.Open();
             _transaction = _connection.BeginTransaction();

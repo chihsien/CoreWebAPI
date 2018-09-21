@@ -20,35 +20,55 @@ namespace TodoApi.Controllers
 
         // GET api/values
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<Breed> Get()
         {         
-            return new string[] { "value1", "value2" };         
+            List<Breed> r = _BreedService.Get();
+            return r.AsEnumerable();
+            // return new string[] { "value1", "value2" };         
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public Breed Get(int id)
         {
-            Breed r =  _BreedService.Get(id);          
-            return r.Name;
+            Breed r =  _BreedService.Get(id);       
+            // if (r == null) return ""; 
+            // return r.Name;
+            return r;
         }
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody]string value)
+        public void Post([FromForm]Breed u)
         {
+            Breed r = new Breed(){
+                Name = u.Name
+            };
+            _BreedService.Add(r);
         }
 
         // PUT api/values/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
+        public void Put(int id, [FromForm]Breed u)
         {
+            Breed r = new Breed(){
+                BreedId = id,
+                Name = u.Name
+            };
+            _BreedService.Edit(r);
         }
 
         // DELETE api/values/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+            _BreedService.Delete(id);
         }
+
+        // [Route("test1")]
+        // public string test1()
+        // {
+        //     return "tttt";
+        // }
     }
 }

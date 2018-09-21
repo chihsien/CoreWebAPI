@@ -25,8 +25,13 @@ namespace TodoApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // services.AddMvc().AddJsonOptions(options =>
+            // {
+            //     options.SerializerSettings.ContractResolver = new DefaultContractResolver();
+            //     options.SerializerSettings.NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore;
+            // });
+
             services.AddMvc();
-            //services.AddScoped<IUnitOfWork, IUnitOfWork>();            
             services.AddScoped<IUnitOfWork, UnitOfWork>();            
             services.AddScoped<IBreedService, BreedService>();
         }

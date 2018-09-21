@@ -12576,11 +12576,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/garychen/vsproject/TodoApi/TodoApi.csproj",
+      "projectUniqueName": "/home/garychen/vsproject/CoreWebApi/TodoApi.csproj",
       "projectName": "TodoApi",
-      "projectPath": "/home/garychen/vsproject/TodoApi/TodoApi.csproj",
+      "projectPath": "/home/garychen/vsproject/CoreWebApi/TodoApi.csproj",
       "packagesPath": "/home/garychen/.nuget/packages/",
-      "outputPath": "/home/garychen/vsproject/TodoApi/obj/",
+      "outputPath": "/home/garychen/vsproject/CoreWebApi/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/share/dotnet/sdk/NuGetFallbackFolder"

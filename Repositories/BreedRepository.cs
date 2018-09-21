@@ -16,7 +16,7 @@ namespace TodoApi.Repositories
         public IEnumerable<Breed> All()
         {
             return Connection.Query<Breed>(
-                "SELECT * FROM Breed",
+                "SELECT * FROM Breed ORDER BY BreedId",
                 transaction: Transaction
             ).ToList();
         }
