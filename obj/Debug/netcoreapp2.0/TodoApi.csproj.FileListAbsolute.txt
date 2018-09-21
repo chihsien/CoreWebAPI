@@ -1,0 +1,11 @@
+/home/garychen/vsproject/TodoApi/bin/Debug/netcoreapp2.0/TodoApi.deps.json
+/home/garychen/vsproject/TodoApi/bin/Debug/netcoreapp2.0/TodoApi.runtimeconfig.json
+/home/garychen/vsproject/TodoApi/bin/Debug/netcoreapp2.0/TodoApi.runtimeconfig.dev.json
+/home/garychen/vsproject/TodoApi/bin/Debug/netcoreapp2.0/TodoApi.dll
+/home/garychen/vsproject/TodoApi/bin/Debug/netcoreapp2.0/TodoApi.pdb
+/home/garychen/vsproject/TodoApi/obj/Debug/netcoreapp2.0/TodoApi.csprojResolveAssemblyReference.cache
+/home/garychen/vsproject/TodoApi/obj/Debug/netcoreapp2.0/TodoApi.csproj.CoreCompileInputs.cache
+/home/garychen/vsproject/TodoApi/obj/Debug/netcoreapp2.0/TodoApi.AssemblyInfoInputs.cache
+/home/garychen/vsproject/TodoApi/obj/Debug/netcoreapp2.0/TodoApi.AssemblyInfo.cs
+/home/garychen/vsproject/TodoApi/obj/Debug/netcoreapp2.0/TodoApi.dll
+/home/garychen/vsproject/TodoApi/obj/Debug/netcoreapp2.0/TodoApi.pdb
