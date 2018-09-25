@@ -23,7 +23,7 @@ namespace TodoApi.DapperUnitOfWork
             _config = config;
 
             // It's for MSSQL Connection
-            // string connectionString = _config["ConnectionStrings:SqlConn"];
+            // string connectionString = _config["ConnectionStrings:MsSqlConn"];
             // _connection = new SqlConnection(connectionString);
 
             // It's for Mysql Connection

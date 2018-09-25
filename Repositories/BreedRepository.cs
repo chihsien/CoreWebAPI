@@ -32,9 +32,10 @@ namespace TodoApi.Repositories
         }
 
         public void Add(Breed entity)
-        {                
+        {       
+            // "INSERT INTO Breed(Name) VALUES(@Name); SELECT SCOPE_IDENTITY()",         
             entity.BreedId = Connection.ExecuteScalar<int>(
-                "INSERT INTO Breed(Name) VALUES(@Name); SELECT SCOPE_IDENTITY()",
+                "INSERT INTO Breed(Name) VALUES(@Name)",
                 param: new { Name = entity.Name },
                 transaction: Transaction
             );
